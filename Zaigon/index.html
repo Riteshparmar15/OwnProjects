@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xiangras - Modern Asian Takeaway, Vadodara</title>
+  <meta name="description" content="Order momos, Korean ramen, sushi & bubble tea from Xiangras, Gorwa Vadodara. Delivery via Swiggy & Zomato." />
+  <meta name="theme-color" content="#7a1024" />
+  <meta property="og:title" content="Xiangras - Modern Asian Takeaway, Vadodara" />
+  <meta property="og:description" content="香 · रस — Chinese aroma, Indian flavour. Modern Pan-Asian takeaway in Gorwa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xiangras.in" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1200&h=630&fit=crop&q=80" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%237a1024' width='100' height='100'/><text x='50' y='70' text-anchor='middle' font-family='serif' font-size='52' fill='%23f4c14a'>香</text></svg>" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Outfit:wght@400;500;600;700&family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("xiangras-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Xiangras","url":"https://xiangras.in","telephone":"+91XXXXXXXXXX","servesCuisine":["Asian Fusion","Japanese","Korean","Chinese","Thai"],"address":{"@type":"PostalAddress","streetAddress":"Shed No 6, Baroda Co-Operative Industrial Estate, Fulwadi Chowk, Gorwa","addressLocality":"Vadodara","addressRegion":"Gujarat","postalCode":"390024","addressCountry":"IN"},"openingHours":"Mo-Su 11:00-23:00"}
+  </script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+  <script>
+    window.XIANGRAS_CONFIG = {
+      swiggy: "#",
+      zomato: "#",
+      whatsapp: "91XXXXXXXXXX",
+      phone: "+91XXXXXXXXXX",
+      instagram: "https://www.instagram.com/xiangras.in/",
+      googleReviews: "https://www.google.com/maps/search/?api=1&query=Xiangras+Gorwa+Vadodara",
+      menuPdf: "menu.html"
+    };
+  </script>
+
+  <!-- 1. TOP ANNOUNCEMENT BAR (store-style) -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="marquee">
+        <div class="marquee-track">
+          <p class="marquee-item">Get momos, ramen &amp; bubble tea from Gorwa · <span id="open-status-text">Checking…</span> · <span id="live-clock">--:--</span></p>
+          <p class="marquee-item" aria-hidden="true">香 · रस · Chinese aroma · Indian flavour · Kitchen live in Gorwa</p>
+          <p class="marquee-item" aria-hidden="true">Get momos, ramen &amp; bubble tea from Gorwa · OPEN · Order on Swiggy &amp; Zomato</p>
+          <p class="marquee-item" aria-hidden="true">香 · रस · Chinese aroma · Indian flavour · Kitchen live in Gorwa</p>
+        </div>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="hi">हिं</button>
+        <button type="button" class="lang-btn" data-lang="gu">ગુ</button>
+      </div>
+      <div class="theme-switch theme-switch-mobile" id="theme-switch-mobile" role="group" aria-label="Theme color">
+        <button type="button" class="theme-dot is-active" data-theme-pick="cinnabar" title="Cinnabar" aria-label="Cinnabar theme" style="--swatch:#7a1024"></button>
+        <button type="button" class="theme-dot" data-theme-pick="jade" title="Jade" aria-label="Jade theme" style="--swatch:#1f7a62"></button>
+        <button type="button" class="theme-dot" data-theme-pick="saffron" title="Saffron" aria-label="Saffron theme" style="--swatch:#c45c12"></button>
+        <button type="button" class="theme-dot" data-theme-pick="night" title="Night" aria-label="Night theme" style="--swatch:#1a2332"></button>
+        <button type="button" class="theme-cycle" data-theme-cycle title="Auto-cycle themes" aria-pressed="false" aria-label="Auto-cycle themes">↻</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MAIN HEADER: logo + search + actions -->
+  <header class="site-header" id="site-header">
+    <div class="container header-row">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="cat-nav">
+        <span class="hamburger"></span>
+      </button>
+
+      <a href="#home" class="logo" aria-label="Xiangras">
+        <span class="logo-word">XIANGRAS</span>
+        <span class="logo-mix">香 · रस</span>
+      </a>
+
+      <form class="header-search" id="header-search" role="search">
+        <input type="search" id="search-input" placeholder="Find momos, ramen, sushi, bubble tea…" autocomplete="off" aria-label="Search menu" />
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+
+      <div class="header-actions">
+        <div class="theme-switch" id="theme-switch" role="group" aria-label="Theme color">
+          <button type="button" class="theme-dot is-active" data-theme-pick="cinnabar" title="Cinnabar" aria-label="Cinnabar theme" style="--swatch:#7a1024"></button>
+          <button type="button" class="theme-dot" data-theme-pick="jade" title="Jade" aria-label="Jade theme" style="--swatch:#1f7a62"></button>
+          <button type="button" class="theme-dot" data-theme-pick="saffron" title="Saffron" aria-label="Saffron theme" style="--swatch:#c45c12"></button>
+          <button type="button" class="theme-dot" data-theme-pick="night" title="Night" aria-label="Night theme" style="--swatch:#1a2332"></button>
+          <button type="button" class="theme-cycle" id="theme-cycle" aria-pressed="false" title="Auto-cycle themes" aria-label="Auto-cycle themes">↻</button>
+        </div>
+        <a href="#offers" class="header-link">Offers</a>
+        <a href="menu.html" class="header-link" data-link="menuPdf" target="_blank" rel="noopener">Menu</a>
+        <a href="tel:+91XXXXXXXXXX" class="header-link" data-link="phone">Call</a>
+        <a href="#order" class="btn btn-accent btn-sm">Order Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. CATEGORY NAV STRIP -->
+  <nav class="cat-nav" id="cat-nav" aria-label="Categories">
+    <div class="container cat-nav-inner">
+      <a href="#categories" data-jump="momos">Momos</a>
+      <a href="#categories" data-jump="ramen">Ramen</a>
+      <a href="#categories" data-jump="sushi">Sushi</a>
+      <a href="#categories" data-jump="bubble">Bubble Tea</a>
+      <a href="#categories" data-jump="rice">Fried Rice</a>
+      <a href="#bestsellers">Bestsellers</a>
+      <a href="#offers">Promotions</a>
+      <a href="#delivery">Near You</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="home">
+    <!-- 4. HERO BANNER CAROUSEL + FOOD DISPLAY -->
+    <section class="hero-carousel" aria-label="Featured banners">
+      <div class="steam" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <span class="hero-seal">香</span>
+      <div class="carousel" id="hero-carousel">
+        <article class="carousel-slide is-active" data-food="ramen" style="background-image:url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1600&q=80')">
+          <div class="slide-content container">
+            <p class="eyebrow">香 · रस · Gorwa, Vadodara</p>
+            <h1>Chinese aroma.<br />Indian flavour.</h1>
+            <p>Momos, Korean ramen, sushi &amp; bubble tea — order delivery or pickup.</p>
+            <div class="slide-ctas">
+              <a href="#" class="btn btn-accent" data-link="swiggy">Order on Swiggy</a>
+              <a href="#" class="btn btn-outline" data-link="zomato">Order on Zomato</a>
+            </div>
+          </div>
+        </article>
+        <article class="carousel-slide" data-food="momos" style="background-image:url('https://images.unsplash.com/photo-1655648316042-1a863d182d29?w=1600&q=80')">
+          <div class="slide-content container">
+            <p class="eyebrow">20+ varieties</p>
+            <h2>Momos that hit different</h2>
+            <p>Steam, tandoori, fried &amp; kurkure — grab the flash combo tonight.</p>
+            <a href="#offers" class="btn btn-accent">View offers</a>
+          </div>
+        </article>
+        <article class="carousel-slide" data-food="bubble" style="background-image:url('https://images.unsplash.com/photo-1525385133512-2f3bcced5c35?w=1600&q=80')">
+          <div class="slide-content container">
+            <p class="eyebrow">Happy hour 3–6 PM</p>
+            <h2>Bubble tea deals</h2>
+            <p>Blueberry, strawberry &amp; peach iced tea — cool the spice.</p>
+            <a href="#offers" class="btn btn-accent">See promotions</a>
+          </div>
+        </article>
+      </div>
+
+      <aside class="hero-food-stage" id="hero-food-stage" aria-hidden="true">
+        <div class="food-glow"></div>
+        <div class="food-orbit" id="food-orbit">
+          <article class="food-card is-active" data-food="ramen">
+            <div class="food-ring"></div>
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=640&q=80" alt="" />
+            <span class="food-chip">Korean Ramen</span>
+          </article>
+          <article class="food-card" data-food="momos">
+            <div class="food-ring"></div>
+            <img src="https://images.unsplash.com/photo-1655648316042-1a863d182d29?w=640&q=80" alt="" />
+            <span class="food-chip">Steam Momos</span>
+          </article>
+          <article class="food-card" data-food="bubble">
+            <div class="food-ring"></div>
+            <img src="https://images.unsplash.com/photo-1525385133512-2f3bcced5c35?w=640&q=80" alt="" />
+            <span class="food-chip">Bubble Tea</span>
+          </article>
+        </div>
+        <div class="food-satellites">
+          <span class="sat sat-a">🥟</span>
+          <span class="sat sat-b">🍜</span>
+          <span class="sat sat-c">🧋</span>
+        </div>
+        <div class="food-sparks" id="food-sparks"></div>
+      </aside>
+
+      <button type="button" class="carousel-btn prev" id="hero-prev" aria-label="Previous">‹</button>
+      <button type="button" class="carousel-btn next" id="hero-next" aria-label="Next">›</button>
+      <div class="carousel-dots" id="hero-dots"></div>
+    </section>
+
+    <!-- 5. POPULAR CATEGORIES (card grid) -->
+    <section class="section categories" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Shop by craving</h2>
+          <a href="menu.html" class="view-all" data-link="menuPdf" target="_blank" rel="noopener">Full menu →</a>
+        </div>
+        <div class="category-grid">
+          <a class="cat-card" href="#bestsellers" data-filter-jump="momos">
+            <img src="https://images.unsplash.com/photo-1655648316042-1a863d182d29?w=500&q=80" alt="Momos" loading="lazy" />
+            <span>Momos</span>
+          </a>
+          <a class="cat-card" href="#bestsellers" data-filter-jump="ramen">
+            <img src="https://images.unsplash.com/photo-1612929632978-63a21c4bae9e?w=500&q=80" alt="Ramen" loading="lazy" />
+            <span>Ramen</span>
+          </a>
+          <a class="cat-card" href="#bestsellers" data-filter-jump="sushi">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=500&q=80" alt="Sushi" loading="lazy" />
+            <span>Sushi</span>
+          </a>
+          <a class="cat-card" href="#bestsellers" data-filter-jump="bubble">
+            <img src="https://images.unsplash.com/photo-1525385133512-2f3bcced5c35?w=500&q=80" alt="Bubble Tea" loading="lazy" />
+            <span>Bubble Tea</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PRODUCT CAROUSEL — Bestsellers -->
+    <section class="section product-rail" id="bestsellers">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Bestsellers</h2>
+          <div class="rail-controls">
+            <button type="button" class="rail-btn" data-rail="best" data-dir="-1" aria-label="Scroll left">‹</button>
+            <button type="button" class="rail-btn" data-rail="best" data-dir="1" aria-label="Scroll right">›</button>
+          </div>
+        </div>
+        <div class="product-filters">
+          <button type="button" class="pf is-active" data-pf="all">All</button>
+          <button type="button" class="pf" data-pf="momos">Momos</button>
+          <button type="button" class="pf" data-pf="ramen">Ramen</button>
+          <button type="button" class="pf" data-pf="sushi">Sushi</button>
+          <button type="button" class="pf" data-pf="bubble">Bubble Tea</button>
+          <button type="button" class="pf" data-pf="rice">Fried Rice</button>
+        </div>
+        <div class="rail-track" id="rail-best">
+          <article class="product-card" data-cat="momos" data-name="Steam Chicken Momos">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1655648316042-1a863d182d29?w=1200&q=85" data-caption="Steam Chicken Momos">
+              <img src="https://images.unsplash.com/photo-1655648316042-1a863d182d29?w=400&q=80" alt="Steam Chicken Momos" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <span class="tag">Bestseller</span>
+              <h3>Steam Chicken Momos</h3>
+              <p>Juicy chicken · chilli oil</p>
+              <div class="price-row"><span class="price">₹149</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="momos" data-name="Tandoori Momos">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=1200&q=85" data-caption="Tandoori Momos">
+              <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400&q=80" alt="Tandoori Momos" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <h3>Tandoori Momos</h3>
+              <p>Smoky · charred · addictive</p>
+              <div class="price-row"><span class="price">₹179</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="ramen" data-name="Korean Spicy Ramen">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1612929632978-63a21c4bae9e?w=1200&q=85" data-caption="Korean Spicy Ramen">
+              <img src="https://images.unsplash.com/photo-1612929632978-63a21c4bae9e?w=400&q=80" alt="Korean Spicy Ramen" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <span class="tag tag-hot">Spicy</span>
+              <h3>Korean Spicy Ramen</h3>
+              <p>Gochujang heat · soft egg</p>
+              <div class="price-row"><span class="price">₹249</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="ramen" data-name="Miso Ramen">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=1200&q=85" data-caption="Miso Ramen">
+              <img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=400&q=80" alt="Miso Ramen" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <h3>Miso Ramen</h3>
+              <p>Umami broth · greens</p>
+              <div class="price-row"><span class="price">₹229</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="sushi" data-name="Sushi Platter">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=1200&q=85" data-caption="Sushi Platter">
+              <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&q=80" alt="Sushi Platter" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <span class="tag">New</span>
+              <h3>Sushi &amp; Nigiri Platter</h3>
+              <p>Shareable · fresh rolls</p>
+              <div class="price-row"><span class="price">₹399</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="sushi" data-name="California Roll">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=1200&q=85" data-caption="California Roll">
+              <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&q=80" alt="California Roll" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <h3>California Roll</h3>
+              <p>Crab · avocado · cucumber</p>
+              <div class="price-row"><span class="price">₹279</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="bubble" data-name="Blueberry Bubble Tea">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1525385133512-2f3bcced5c35?w=1200&q=85" data-caption="Blueberry Bubble Tea">
+              <img src="https://images.unsplash.com/photo-1525385133512-2f3bcced5c35?w=400&q=80" alt="Blueberry Bubble Tea" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <h3>Blueberry Bubble Tea</h3>
+              <p>Fruity · pearls · chilled</p>
+              <div class="price-row"><span class="price">₹149</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="bubble" data-name="Strawberry Bubble Tea">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1558857563-b371033873b0?w=1200&q=85" data-caption="Strawberry Bubble Tea">
+              <img src="https://images.unsplash.com/photo-1558857563-b371033873b0?w=400&q=80" alt="Strawberry Bubble Tea" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <h3>Strawberry Bubble Tea</h3>
+              <p>Sweet berry · tapioca</p>
+              <div class="price-row"><span class="price">₹149</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="rice" data-name="Schezwan Fried Rice">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=1200&q=85" data-caption="Schezwan Fried Rice">
+              <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80" alt="Schezwan Fried Rice" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <h3>Schezwan Fried Rice</h3>
+              <p>Wok-tossed · bold kick</p>
+              <div class="price-row"><span class="price">₹189</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+          <article class="product-card" data-cat="rice" data-name="Veg Fried Rice">
+            <button type="button" class="lightbox-trigger" data-full="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1200&q=85" data-caption="Veg Fried Rice">
+              <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80" alt="Veg Fried Rice" loading="lazy" />
+            </button>
+            <div class="product-body">
+              <h3>Veg Fried Rice</h3>
+              <p>Classic comfort bowl</p>
+              <div class="price-row"><span class="price">₹159</span><a href="#order" class="btn btn-sm btn-accent">Order</a></div>
+            </div>
+          </article>
+        </div>
+        <p class="search-empty" id="search-empty" hidden>No dishes match your search.</p>
+      </div>
+    </section>
+
+    <!-- 7. PROMOTIONS -->
+    <section class="section offers" id="offers">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Promotions</h2>
+          <a href="#order" class="view-all">Order deals →</a>
+        </div>
+        <div class="promo-grid">
+          <article class="promo-card promo-featured">
+            <span class="promo-badge">FLASH</span>
+            <h3>Momo + Ramen Combo</h3>
+            <p>6 steam momos + Korean spicy ramen.</p>
+            <div class="promo-price"><strong>₹349</strong> <s>₹428</s></div>
+            <div class="countdown" aria-label="Ends tonight">
+              <span><b id="cd-h">00</b><small>HRS</small></span>
+              <span><b id="cd-m">00</b><small>MIN</small></span>
+              <span><b id="cd-s">00</b><small>SEC</small></span>
+            </div>
+            <a href="#order" class="btn btn-accent">Grab deal</a>
+          </article>
+          <article class="promo-card">
+            <span class="promo-badge soft">WEEKDAY</span>
+            <h3>Bubble Tea Happy Hour</h3>
+            <p>Buy 1 get peach iced tea 50% off · 3–6 PM</p>
+            <a href="#order" class="btn btn-outline">Order drinks</a>
+          </article>
+          <article class="promo-card">
+            <span class="promo-badge soft">CODE</span>
+            <h3>First order · XIANG10</h3>
+            <p>Extra 10% off on WhatsApp orders.</p>
+            <div class="coupon-row">
+              <code id="coupon-code">XIANG10</code>
+              <button type="button" class="btn btn-sm btn-accent" id="copy-coupon" data-code="XIANG10">Copy</button>
+            </div>
+            <p class="coupon-copied" id="coupon-copied" hidden>Copied!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. WIDE PROMO BANNER -->
+    <section class="promo-banner">
+      <div class="container promo-banner-inner">
+        <div>
+          <p class="eyebrow">Tonight only</p>
+          <h2>Hungry? Kitchen is live in Gorwa.</h2>
+          <p>~25–35 min delivery · ~15 min pickup</p>
+        </div>
+        <div class="promo-banner-ctas" id="order">
+          <a href="#" class="btn btn-accent" data-link="swiggy">Swiggy</a>
+          <a href="#" class="btn btn-outline" data-link="zomato">Zomato</a>
+          <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-ghost" data-link="whatsapp">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FIND NEAR YOU (location search style) -->
+    <section class="section delivery" id="delivery">
+      <div class="container delivery-box">
+        <div>
+          <h2 class="section-title">Find Xiangras near you</h2>
+          <p>We deliver across Gorwa &amp; nearby Vadodara. Check your area.</p>
+          <ul class="areas-chips">
+            <li>Gorwa</li><li>Alkapuri</li><li>Akota</li><li>Subhanpura</li><li>Race Course</li><li>Ellora Park</li>
+          </ul>
+        </div>
+        <form class="area-check" id="area-check">
+          <label for="area-input">Enter your area</label>
+          <div class="area-row">
+            <input type="text" id="area-input" placeholder="e.g. Alkapuri" />
+            <button type="submit" class="btn btn-accent">Check</button>
+          </div>
+          <p class="area-result" id="area-result" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 10. HOW IT WORKS + TRUST -->
+    <section class="section trust" id="how">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Why order Xiangras</h2>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-icon">🔒</span>
+            <h3>Sealed packaging</h3>
+            <p>Hygienic takeaway packs for delivery &amp; pickup</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">⭐</span>
+            <h3>Local favourite</h3>
+            <p>4.6★ vibe from Gorwa foodies · real kitchen</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">💬</span>
+            <h3>WhatsApp support</h3>
+            <p>Bulk, catering &amp; custom spice — just message</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🚚</span>
+            <h3>Fast delivery</h3>
+            <p>Swiggy &amp; Zomato · ~25–35 min typical</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. REVIEWS -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">What locals say</h2>
+          <a class="view-all" data-link="googleReviews" href="#" target="_blank" rel="noopener">Google reviews →</a>
+        </div>
+        <div class="review-grid">
+          <blockquote><div class="stars">★★★★★</div><p>"Korean spicy ramen is next level."</p><footer>— Priya S.</footer></blockquote>
+          <blockquote><div class="stars">★★★★★</div><p>"Came for momos, stayed for bubble tea."</p><footer>— Aarav M.</footer></blockquote>
+          <blockquote><div class="stars">★★★★★</div><p>"Sushi platter packed perfectly on Zomato."</p><footer>— Neha K.</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. CONTACT / CATERING STRIP -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Visit or message us</h2>
+          <address>
+            Shed No 6, Baroda Co-Operative Industrial Estate,<br />
+            Fulwadi Chowk, Gorwa, Vadodara 390024
+          </address>
+          <p class="hours">Mon–Sun · 11:00 AM – 11:00 PM<br /><span id="location-open-label">Status…</span></p>
+          <div class="contact-links">
+            <a class="btn btn-accent" data-link="phone" href="tel:+91XXXXXXXXXX">Call</a>
+            <a class="btn btn-outline" data-link="whatsapp" href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+            <a class="btn btn-ghost" href="menu.html" data-link="menuPdf" target="_blank" rel="noopener">Print menu</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <h3>Quick message</h3>
+          <input type="text" id="name" name="name" placeholder="Name" required />
+          <input type="tel" id="phone" name="phone" placeholder="Phone" required inputmode="numeric" />
+          <textarea id="message" name="message" rows="3" placeholder="Message" required></textarea>
+          <button type="submit" class="btn btn-accent btn-full">Send</button>
+          <p class="form-success" id="form-success" hidden>Thanks! (Demo — connect Formspree later.)</p>
+          <span class="field-error" id="name-error"></span>
+          <span class="field-error" id="phone-error"></span>
+          <span class="field-error" id="message-error"></span>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo" aria-label="Xiangras">
+        <span class="logo-word">XIANGRAS</span>
+        <span class="logo-mix">香 · रस</span>
+      </a>
+        <p>Chinese aroma, Indian flavour · Gorwa, Vadodara</p>
+        <a href="https://www.instagram.com/xiangras.in/" data-link="instagram" target="_blank" rel="noopener">@xiangras.in</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#bestsellers">Bestsellers</a></li>
+          <li><a href="#offers">Promotions</a></li>
+          <li><a href="#delivery">Near you</a></li>
+          <li><a href="menu.html">Full menu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Order</h4>
+        <ul>
+          <li><a href="#" data-link="swiggy">Swiggy</a></li>
+          <li><a href="#" data-link="zomato">Zomato</a></li>
+          <li><a href="https://wa.me/91XXXXXXXXXX" data-link="whatsapp">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; <span id="copyright-year"></span> Xiangras. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile order dock -->
+  <aside class="order-dock" id="order-dock">
+    <a href="tel:+91XXXXXXXXXX" class="dock-btn call" data-link="phone">Call</a>
+    <a href="https://wa.me/91XXXXXXXXXX" class="dock-btn wa" data-link="whatsapp">WhatsApp</a>
+    <a href="#order" class="dock-btn order">Order</a>
+  </aside>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+    <button type="button" class="lightbox-nav prev" id="lightbox-prev" aria-label="Prev">‹</button>
+    <figure><img src="" alt="" id="lightbox-img" /><figcaption id="lightbox-caption"></figcaption></figure>
+    <button type="button" class="lightbox-nav next" id="lightbox-next" aria-label="Next">›</button>
+  </div>
+
+  <!-- Cookie -->
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <p>We may use analytics once enabled. Accept to allow future tracking scripts.</p>
+    <div>
+      <button type="button" class="btn btn-sm btn-accent" id="cookie-accept">Accept</button>
+      <button type="button" class="btn btn-sm btn-outline" id="cookie-decline">Decline</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

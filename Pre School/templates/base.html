@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Little Sprouts Preschool{% endblock %}</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sun: #FFC94D; --sky: #6EC6E8; --grass: #7ED957;
+    --coral: #FF8A65; --lavender: #B39CD0; --cream: #FFF8ED;
+    --ink: #4A4453; --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Nunito', sans-serif; background: var(--cream); color: var(--ink); }
+  h1, h2, h3, .brand { font-family: 'Baloo 2', cursive; }
+  .navbar {
+    background: var(--white); padding: 14px 28px; display: flex;
+    align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-bottom: 4px solid var(--sun);
+  }
+  .brand { font-size: 24px; font-weight: 800; color: var(--coral); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .nav-links a { text-decoration: none; color: var(--ink); font-weight: 700; padding: 8px 16px; border-radius: 20px; transition: 0.2s; }
+  .nav-links a:hover { background: var(--sun); color: var(--white); }
+  .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+  .card { background: var(--white); border-radius: 20px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); margin-bottom: 20px; }
+  .btn { display: inline-block; padding: 10px 22px; border-radius: 25px; font-weight: 700; text-decoration: none; border: none; cursor: pointer; font-size: 15px; font-family: 'Nunito', sans-serif; transition: transform 0.15s, box-shadow 0.15s; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .btn-primary { background: var(--coral); color: white; }
+  .btn-secondary { background: var(--sky); color: white; }
+  .btn-success { background: var(--grass); color: white; }
+  .btn-outline { background: white; color: var(--ink); border: 2px solid #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: var(--sun); color: white; text-align: left; padding: 12px; font-family: 'Baloo 2'; font-size: 14px; white-space: nowrap; }
+  th:first-child { border-radius: 12px 0 0 0; }
+  th:last-child { border-radius: 0 12px 0 0; }
+  td { padding: 12px; border-bottom: 1px solid #f0e9dc; }
+  tr:hover { background: #fffaf0; }
+  .table-wrap { overflow-x: auto; }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .stat-card { border-radius: 20px; padding: 22px; color: white; text-align: center; }
+  .stat-card h3 { margin: 0 0 6px 0; font-size: 36px; }
+  .stat-card p { margin: 0; font-weight: 700; opacity: 0.95; }
+  .stat-sun { background: linear-gradient(135deg, var(--sun), #ffd97a); }
+  .stat-sky { background: linear-gradient(135deg, var(--sky), #9bdcf1); }
+  .stat-grass { background: linear-gradient(135deg, var(--grass), #a6e88a); }
+  .stat-coral { background: linear-gradient(135deg, var(--coral), #ffab8f); }
+  form label { display: block; font-weight: 700; margin: 14px 0 6px; }
+  form input, form select { width: 100%; padding: 10px 14px; border-radius: 12px; border: 2px solid #eee; font-family: 'Nunito', sans-serif; font-size: 15px; }
+  form input:focus, form select:focus { outline: none; border-color: var(--sky); }
+  .flash { padding: 12px 18px; border-radius: 12px; margin-bottom: 16px; font-weight: 700; }
+  .flash-success { background: #e3f7dc; color: #3a7a2a; }
+  .flash-error { background: #fde3e3; color: #a33a3a; }
+  .search-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+  .search-bar input { padding: 10px 16px; border-radius: 20px; border: 2px solid #eee; flex: 1; min-width: 200px; }
+  .top-actions { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+  .actions a { margin-right: 8px; font-size: 13px; text-decoration: none; }
+  .upload-hero { text-align: center; padding: 60px 20px; }
+  .upload-hero .emoji { font-size: 64px; }
+  .drop-box { border: 3px dashed var(--sky); border-radius: 20px; padding: 40px; background: #f5fbfe; }
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="{{ url_for('start') }}" class="brand">🌻 Little Sprouts</a>
+  <div class="nav-links">
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    <a href="{{ url_for('students') }}">Students</a>
+    <a href="{{ url_for('attendance') }}">Attendance</a>
+    <a href="{{ url_for('parent_portal') }}">Parent Portal</a>
+    <a href="{{ url_for('add_student') }}">+ Add Student</a>
+    <a href="{{ url_for('upload_excel') }}">Upload Excel</a>
+    <a href="{{ url_for('export_excel') }}">Export</a>
+  </div>
+</nav>
+<div class="container">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</div>
+</body>
+</html>

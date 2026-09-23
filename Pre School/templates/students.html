@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Students - Little Sprouts{% endblock %}
+{% block content %}
+<div class="top-actions">
+  <h1>🧒 Students</h1>
+  <div class="actions">
+    <a href="{{ url_for('add_student') }}" class="btn btn-primary">+ Add Student</a>
+    <a href="{{ url_for('attendance') }}" class="btn btn-secondary">📅 Attendance</a>
+  </div>
+</div>
+
+{% if name_col %}
+<form class="search-bar" method="get">
+  <input type="text" name="search" placeholder="🔍 Search by {{ name_col }}..." value="{{ search }}">
+  <button type="submit" class="btn btn-secondary">Search</button>
+  <a href="{{ url_for('students') }}" class="btn btn-outline">Clear</a>
+</form>
+{% endif %}
+
+{% if class_col %}
+<div class="card">
+  <h2>🏫 Promote a Class</h2>
+  <form method="post" action="{{ url_for('promote_students') }}" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+    <select name="from_class" required>
+      {% for option in class_options %}<option value="{{ option }}">{{ option }}</option>{% endfor %}
+    </select>
+    <span>→</span>
+    <input type="text" name="to_class" placeholder="New class" required>
+    <button type="submit" class="btn btn-primary">Promote</button>
+  </form>
+</div>
+{% endif %}
+
+<div class="card table-wrap">
+  <table>
+    <tr>
+      {% for col in columns %}
+        <th>{{ col }}</th>
+      {% endfor %}
+      <th>Actions</th>
+    </tr>
+    {% for r in rows %}
+    <tr>
+      {% for col in columns %}
+        <td>{{ r.data[col] }}</td>
+      {% endfor %}
+      <td class="actions">
+        <a href="{{ url_for('student_detail', row_id=r.row_id) }}">👁️ View</a>
+        <a href="{{ url_for('edit_student', row_id=r.row_id) }}">✏️ Edit</a>
+        <a href="{{ url_for('student_id_card', row_id=r.row_id) }}" target="_blank">🪪 ID</a>
+        <a href="{{ url_for('delete_student', row_id=r.row_id) }}" onclick="return confirm('Remove this student?')">🗑️ Delete</a>
+      </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="{{ columns|length + 1 }}">No students found.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Welcome - Little Sprouts{% endblock %}
+{% block content %}
+<div class="upload-hero">
+  <div class="emoji">🌻🧸📋</div>
+  <h1>Welcome, Head of Preschool!</h1>
+  <p style="font-size:17px; opacity:0.8; max-width:500px; margin:10px auto 30px;">
+    Let's get started. Upload your student Excel sheet below and we'll turn it into
+    an easy-to-manage dashboard — no matter how your columns are named.
+  </p>
+
+  <div class="drop-box" style="max-width:500px; margin:0 auto;">
+    <form method="post" action="{{ url_for('upload_excel') }}" enctype="multipart/form-data">
+      <p style="font-size:40px; margin:0;">📤</p>
+      <p style="font-weight:700; margin:10px 0;">Choose your Excel file (.xlsx or .xls)</p>
+      <input type="file" name="excel_file" accept=".xlsx,.xls" required>
+      <div style="margin-top:20px;">
+        <button type="submit" class="btn btn-primary">Upload &amp; Get Started</button>
+      </div>
+    </form>
+  </div>
+
+  <p style="margin-top:24px; font-size:14px; opacity:0.6;">
+    Tip: your Excel's first row should be column headers (e.g. Name, Class, Parent Contact, Fee Status).
+    Any column names work — we'll read them automatically.
+  </p>
+</div>
+{% endblock %}

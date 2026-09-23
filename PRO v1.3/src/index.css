@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  /* ProStafff — Rustic Charm Trust (60-30-10) */
+  /* 60% Dominant — wheat beige base */
+  --color-cream: #fffcf2;
+  /* 30% Secondary — charcoal structure & dark surfaces */
+  --color-navy: #403d39;
+  --color-ink: #252422;
+  --color-raised: #252422;
+  --color-divider: #ccc5b9;
+  /* 10% Accent — rust CTAs & highlights */
+  --color-orange: #eb5e28;
+  --color-orange-hi: #c94a1a;
+  --color-orange-light: #f07a4a;
+  --color-orange-pale: #f6e4d8;
+  --color-blue-pale: #f6e4d8;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+  --ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --radius-card: 50px;
+  --radius-card-mobile: 24px;
+  --radius-hero: 58px;
+  --radius-hero-mobile: 32px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: var(--color-orange-pale);
+    color: var(--color-navy);
+  }
+}
+
+@layer utilities {
+  .site-shell {
+    width: 100%;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-shell-narrow {
+    max-width: 1000px;
+  }
+
+  @media (min-width: 768px) {
+    .site-shell {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  .site-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .site-section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(64, 61, 57, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(64, 61, 57, 0.035) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .grid-bg-dark {
+    background-image:
+      linear-gradient(to right, rgba(255, 252, 242, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 252, 242, 0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .radius-card {
+    border-radius: var(--radius-card-mobile);
+  }
+
+  .radius-hero {
+    border-radius: var(--radius-hero-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .radius-card {
+      border-radius: var(--radius-card);
+    }
+    .radius-hero {
+      border-radius: var(--radius-hero);
+    }
+  }
+
+  .marquee-mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student ID Card</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 32px; background: #fff; }
+    .card { border: 2px solid #6EC6E8; border-radius: 18px; padding: 20px; max-width: 480px; margin: auto; }
+    .title { color: #FF8A65; font-weight: bold; font-size: 20px; margin-bottom: 12px; }
+    .grid { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: center; }
+    img { width: 100px; height: 100px; border-radius: 12px; object-fit: cover; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="title">🌻 Little Sprouts Preschool</div>
+    <div class="grid">
+      <div>
+        {% if photo_path %}
+          <img src="{{ url_for('static', filename=photo_path) }}" alt="Student photo">
+        {% else %}
+          <div style="width:100px;height:100px;border-radius:12px;background:#f4f4f4;display:flex;align-items:center;justify-content:center;">Photo</div>
+        {% endif %}
+      </div>
+      <div>
+        <p><strong>Name:</strong> {{ row_data[name_col] if name_col else 'Student' }}</p>
+        <p><strong>Class:</strong> {{ row_data[class_col] if class_col else '—' }}</p>
+        <p><strong>ID:</strong> {{ row_id + 1 }}</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

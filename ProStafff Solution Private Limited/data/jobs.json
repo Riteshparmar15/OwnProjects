@@ -1,0 +1,154 @@
+[
+  {
+    "id": "video-demo-role-1787301948040-1787301960808",
+    "title": "Video Demo Role 1787301948040",
+    "location": "Surat, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Demo job published from the company dashboard."
+  },
+  {
+    "id": "demo-floor-lead-1787301925700-1787301926410",
+    "title": "Demo Floor Lead 1787301925700 Updated",
+    "location": "Ahmedabad, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Lead a high-street store team through festive trading."
+  },
+  {
+    "id": "video-demo-role-1787301809326-1787301825862",
+    "title": "Video Demo Role 1787301809326",
+    "location": "Surat, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Demo job published from the company dashboard."
+  },
+  {
+    "id": "demo-floor-lead-1787301748866-1787301749879",
+    "title": "Demo Floor Lead 1787301748866 Updated",
+    "location": "Ahmedabad, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Lead a high-street store team through festive trading."
+  },
+  {
+    "id": "video-demo-role-1787301559805-1787301572783",
+    "title": "Video Demo Role 1787301559805",
+    "location": "Surat, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Demo job published from the company dashboard."
+  },
+  {
+    "id": "demo-floor-lead-1787301516582-1787301519450",
+    "title": "Demo Floor Lead 1787301516582 Updated",
+    "location": "Ahmedabad, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Lead a high-street store team through festive trading."
+  },
+  {
+    "id": "video-demo-role-1787298700115-1787298712635",
+    "title": "Video Demo Role 1787298700115",
+    "location": "Surat, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Demo job published from the company dashboard."
+  },
+  {
+    "id": "demo-floor-lead-1787298661834-1787298662540",
+    "title": "Demo Floor Lead 1787298661834 Updated",
+    "location": "Ahmedabad, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Lead a high-street store team through festive trading."
+  },
+  {
+    "id": "demo-floor-lead-1787297930524-1787297931232",
+    "title": "Demo Floor Lead 1787297930524 Updated",
+    "location": "Ahmedabad, Gujarat",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Lead a high-street store team through festive trading."
+  },
+  {
+    "id": "store-associate-mumbai",
+    "title": "Store Associate",
+    "location": "Mumbai, Maharashtra",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Deliver exceptional floor service for a national fashion retailer. Drive conversion, maintain visual standards, and support peak-hour operations."
+  },
+  {
+    "id": "cashier-delhi",
+    "title": "Cashier / POS Associate",
+    "location": "New Delhi, NCR",
+    "category": "in-store",
+    "type": "Temporary",
+    "description": "Handle high-volume checkout with accuracy and warmth. Ideal for candidates who thrive in fast-paced lifestyle and grocery formats."
+  },
+  {
+    "id": "visual-merchandiser-bengaluru",
+    "title": "Visual Merchandiser",
+    "location": "Bengaluru, Karnataka",
+    "category": "in-store",
+    "type": "Permanent",
+    "description": "Translate brand stories into compelling in-store displays. Partner with store leadership on window schemes, planograms, and campaign resets."
+  },
+  {
+    "id": "seasonal-associate-pune",
+    "title": "Seasonal Retail Associate",
+    "location": "Pune, Maharashtra",
+    "category": "in-store",
+    "type": "Seasonal",
+    "description": "Join festive and sale-period teams for a leading lifestyle brand. Rapid onboarding, flexible shifts, and strong customer-service focus."
+  },
+  {
+    "id": "store-manager-hyderabad",
+    "title": "Store Manager",
+    "location": "Hyderabad, Telangana",
+    "category": "management",
+    "type": "Permanent",
+    "description": "Own P&L, people, and customer experience for a flagship store. Coach associates, hit sales targets, and uphold brand operating standards."
+  },
+  {
+    "id": "area-manager-west",
+    "title": "Area / District Manager",
+    "location": "West India (Multi-city)",
+    "category": "management",
+    "type": "Executive Search",
+    "description": "Lead a cluster of stores across the western region. Drive like-for-like growth, talent development, and consistent brand execution."
+  },
+  {
+    "id": "assistant-manager-chennai",
+    "title": "Assistant Store Manager",
+    "location": "Chennai, Tamil Nadu",
+    "category": "management",
+    "type": "Permanent",
+    "description": "Support store leadership on floor operations, inventory discipline, and team scheduling for a premium multi-brand retailer."
+  },
+  {
+    "id": "retail-merchandiser-mumbai",
+    "title": "Retail Merchandiser",
+    "location": "Mumbai, Maharashtra",
+    "category": "corporate",
+    "type": "Permanent",
+    "description": "Shape range architecture, seasonal buys, and in-season trading for a national apparel brand. Strong commercial and analytical mindset required."
+  },
+  {
+    "id": "ecommerce-ops-bengaluru",
+    "title": "E-commerce Operations Specialist",
+    "location": "Bengaluru, Karnataka",
+    "category": "corporate",
+    "type": "Permanent",
+    "description": "Orchestrate marketplace and D2C fulfilment SLAs, returns, and peak-season capacity planning for a high-growth online retailer."
+  },
+  {
+    "id": "supply-chain-ncr",
+    "title": "Supply Chain Coordinator",
+    "location": "Gurugram, Haryana",
+    "category": "corporate",
+    "type": "Permanent",
+    "description": "Keep store and warehouse inventory flowing. Coordinate inbound logistics, allocation, and shortage recovery across a national retail network."
+  }
+]

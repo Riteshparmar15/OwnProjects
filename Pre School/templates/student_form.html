@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{% if row_data %}Edit{% else %}Add{% endif %} Student - Little Sprouts{% endblock %}
+{% block content %}
+<h1>{% if row_data %}✏️ Edit Student{% else %}➕ Add New Student{% endif %}</h1>
+<div class="card">
+  <form method="post" enctype="multipart/form-data">
+    <label>Student Photo</label>
+    <input type="file" name="photo" accept="image/*">
+
+    {% for col in columns %}
+      {% set meta = field_meta[col] if field_meta and col in field_meta else {"type": "text", "options": [], "required": false} %}
+      <label>{{ col }}{% if meta.required %} <span style="color:#a33a3a;">*</span>{% endif %}</label>
+
+      {% if meta.type == "date" %}
+        <input type="date" name="{{ col }}" value="{{ row_data[col] if row_data else '' }}">
+
+      {% elif meta.type == "select" %}
+        <input type="text" name="{{ col }}" list="list_{{ loop.index }}"
+               value="{{ row_data[col] if row_data else '' }}"
+               placeholder="Choose or type a new {{ col }}">
+        <datalist id="list_{{ loop.index }}">
+          {% for opt in meta.options %}
+            <option value="{{ opt }}">
+          {% endfor %}
+        </datalist>
+
+      {% else %}
+        <input type="text" name="{{ col }}" value="{{ row_data[col] if row_data else '' }}"
+               {% if meta.required %}required{% endif %}>
+      {% endif %}
+    {% endfor %}
+
+    <div style="margin-top:24px;">
+      <button type="submit" class="btn btn-primary">💾 Save Student</button>
+      <a href="{{ url_for('students') }}" class="btn btn-outline">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

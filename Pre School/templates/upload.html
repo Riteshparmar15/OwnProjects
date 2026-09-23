@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Upload Excel - Little Sprouts{% endblock %}
+{% block content %}
+<h1>📤 Upload Student Excel File</h1>
+<div class="card">
+  {% if has_data %}
+    <p style="color:#a33a3a; font-weight:700;">⚠️ Uploading a new file will replace your current data. Export first if you want a backup.</p>
+  {% endif %}
+  <p>Any column names work — we'll automatically read whatever headers your file has.</p>
+  <form method="post" enctype="multipart/form-data">
+    <label>Choose Excel File</label>
+    <input type="file" name="excel_file" accept=".xlsx,.xls" required>
+    <div style="margin-top:20px;">
+      <button type="submit" class="btn btn-primary">📤 Upload &amp; Import</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

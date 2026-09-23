@@ -1,0 +1,10 @@
+# Xiangras robots.txt
+# REPLACE https://xiangras.in with your real domain when live
+
+User-agent: *
+Allow: /
+
+Sitemap: https://xiangras.in/sitemap.xml
+
+# Disallow utility pages if needed
+# Disallow: /404.html

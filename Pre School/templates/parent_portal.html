@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Parent Portal - Little Sprouts{% endblock %}
+{% block content %}
+<h1>👨‍👩‍👧‍👦 Parent Portal</h1>
+<div class="card">
+  <form method="post" class="search-bar">
+    <input type="text" name="student_identifier" placeholder="Enter student name or ID" value="{{ lookup_value or '' }}">
+    <button type="submit" class="btn btn-secondary">View Child</button>
+  </form>
+</div>
+
+{% if row_data %}
+<div class="card" style="display:grid; grid-template-columns: 220px 1fr; gap:24px; align-items:start;">
+  <div>
+    {% if photo_path %}
+      <img src="{{ url_for('static', filename=photo_path) }}" alt="Student photo" style="width:100%; border-radius:16px; object-fit:cover; max-height:260px;">
+    {% else %}
+      <div style="padding:32px; border:2px dashed #eee; border-radius:16px; text-align:center; color:#888;">No photo yet</div>
+    {% endif %}
+  </div>
+  <div>
+    <h2>{{ row_data[name_col] if name_col else 'Student' }}</h2>
+    <p><strong>Class:</strong> {{ row_data[class_col] if class_col else '—' }}</p>
+    {% for key, value in row_data.items() %}
+      {% if key not in [name_col, class_col] and value not in [none, ''] %}
+        <p><strong>{{ key }}:</strong> {{ value }}</p>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="card">
+  <h2>💰 Fee History</h2>
+  {% if fee_history %}
+    <table>
+      <tr><th>Date</th><th>Amount</th><th>Note</th></tr>
+      {% for item in fee_history %}
+        <tr><td>{{ item.date }}</td><td>{{ item.amount }}</td><td>{{ item.note }}</td></tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No fee records available.</p>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>📅 Recent Attendance</h2>
+  {% if attendance_summary %}
+    <table>
+      <tr><th>Date</th><th>Status</th></tr>
+      {% for item in attendance_summary %}
+        <tr><td>{{ item.date }}</td><td>{{ item.status }}</td></tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No attendance summary available.</p>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

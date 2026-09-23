@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Attendance - Little Sprouts{% endblock %}
+{% block content %}
+<h1>📅 Attendance Tracking</h1>
+<div class="card">
+  <form method="post" style="display:grid; gap:10px; max-width:700px;">
+    <input type="date" name="attendance_date" value="{{ selected_month }}-01" required>
+    <select name="attendance_class">
+      {% for class_name in classes %}
+        <option value="{{ class_name }}">{{ class_name }}</option>
+      {% endfor %}
+    </select>
+    <textarea name="present_names" rows="3" placeholder="Present student names, one per line or comma separated"></textarea>
+    <textarea name="absent_names" rows="3" placeholder="Absent student names, one per line or comma separated"></textarea>
+    <button type="submit" class="btn btn-primary">Save Attendance</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>📊 Monthly Summary</h2>
+  {% if summary %}
+    <table>
+      <tr><th>Class</th><th>Present</th><th>Absent</th></tr>
+      {% for class_name, values in summary.items() %}
+        <tr><td>{{ class_name }}</td><td>{{ values.present }}</td><td>{{ values.absent }}</td></tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No attendance logged for this month yet.</p>
+  {% endif %}
+</div>
+{% endblock %}

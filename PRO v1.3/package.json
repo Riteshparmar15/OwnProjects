@@ -1,0 +1,28 @@
+{
+  "name": "pro-v1-3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --port 5173 --open",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview --host --port 4173 --open",
+    "start": "vite --host --port 5173 --open"
+  },
+  "dependencies": {
+    "framer-motion": "^13.4.1",
+    "lucide-react": "^1.47.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  }
+}

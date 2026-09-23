@@ -1,0 +1,13 @@
+node_modules
+dist
+.DS_Store
+Thumbs.db
+*.log
+.vite
+.env
+data/resumes/*
+!data/resumes/.gitkeep
+data/*.xlsx
+test-results
+playwright-report
+blob-report

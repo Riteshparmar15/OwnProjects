@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found — Xiangras</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#7a1024" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Outfit:wght@400;600&family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --y: #f4c14a; --bg: #e7f1ec; --ink: #7a1024; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Outfit, sans-serif;
+      background:
+        radial-gradient(ellipse 70% 50% at 20% 0%, rgba(244,193,74,0.25), transparent 55%),
+        var(--bg);
+      color: var(--ink);
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-family: Yeseva One, serif;
+      font-size: clamp(4rem, 18vw, 8rem);
+      color: #ff5a3c;
+      letter-spacing: 0.02em;
+      line-height: 0.9;
+      animation: float 3s ease-in-out infinite;
+    }
+    h2 {
+      font-family: Yeseva One, serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      margin: 0.75rem 0 1rem;
+      color: var(--ink);
+    }
+    p { color: #5c3a40; max-width: 28rem; margin: 0 auto 1.5rem; }
+    a {
+      display: inline-flex;
+      padding: 0.85rem 1.4rem;
+      background: linear-gradient(180deg, #ffd36a, var(--y));
+      color: #4a120c;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 0.8rem;
+      border-radius: 999px;
+    }
+    .logo {
+      color: var(--ink);
+      font-family: Yeseva One, serif;
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+    }
+    .logo span { color: #c98912; font-family: "Noto Serif SC", serif; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      h1 { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p class="logo">XIANGRAS · <span>香 · रस</span></p>
+    <h1>404</h1>
+    <h2>This plate is empty</h2>
+    <p>That page doesn’t exist. Head back — momos, ramen, and bubble tea are waiting.</p>
+    <a href="index.html">Back to Xiangras</a>
+  </div>
+</body>
+</html>

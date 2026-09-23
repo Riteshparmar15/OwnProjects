@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   ProStafff Solution — Design Tokens
+   Deep Navy #0f172a · Electric Blue #2563eb · crisp white · slate text
+   -------------------------------------------------------------------------- */
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #0f172a;
+  --color-navy-light: #1e293b;
+  --color-electric: #2563eb;
+  --color-electric-dark: #1d4ed8;
+  --color-electric-soft: #dbeafe;
+  --color-slate-body: #475569;
+  --color-slate-muted: #64748b;
+}
+
+/* Smooth scrolling + native form control color */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-slate-body);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  border-radius: 0.5rem;
+  background: var(--color-electric);
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Sticky header elevation after scroll */
+.site-header.is-scrolled {
+  box-shadow: 0 8px 30px -12px rgb(15 23 42 / 0.18);
+  background: rgb(255 255 255 / 0.92);
+}
+
+/* Decorative hero grid */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Card hover lift used across services, roles, and jobs */
+.lift-card {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.lift-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -18px rgb(15 23 42 / 0.22);
+}
+
+/* Job filter pills */
+.filter-btn {
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #334155;
+  border-radius: 9999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.filter-btn:hover,
+.filter-btn.is-active {
+  background: var(--color-navy);
+  color: #fff;
+  border-color: var(--color-navy);
+}
+
+/* Form tabs */
+.form-tab {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  color: #64748b;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.form-tab.is-active {
+  color: var(--color-electric);
+  border-bottom-color: var(--color-electric);
+  background: #eff6ff;
+}
+
+@media (min-width: 640px) {
+  .form-tab {
+    font-size: 0.925rem;
+    padding: 0.9rem 1rem;
+  }
+}
+
+.form-panel[hidden] {
+  display: none;
+}
+
+/* Inputs */
+.field-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.field-input,
+.field-select,
+.field-textarea {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #fff;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.9375rem;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.field-input:focus,
+.field-select:focus,
+.field-textarea:focus {
+  border-color: var(--color-electric);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 0.18);
+}
+
+.field-input.is-invalid,
+.field-select.is-invalid,
+.field-textarea.is-invalid {
+  border-color: #ef4444;
+}
+
+/* Scroll-in reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Mobile drawer */
+.nav-drawer {
+  transform: translateX(100%);
+  transition: transform 260ms ease;
+}
+
+.nav-drawer.is-open {
+  transform: translateX(0);
+}
+
+.nav-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+
+.nav-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Custom file input look */
+.file-drop {
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #f8fafc;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.file-drop:hover,
+.file-drop.is-dragover {
+  border-color: var(--color-electric);
+  background: #eff6ff;
+}
+
+.dash-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  border: 0;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: #cbd5e1;
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dash-nav:hover,
+.dash-nav.is-active {
+  background: rgb(255 255 255 / 0.1);
+  color: #fff;
+}
