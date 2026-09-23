@@ -1,24 +1,32 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/brand/prostafff-mark.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="ProStafff Solution — retail staffing & recruitment. Permanent, seasonal, and executive talent for leading brands."
-    />
-    <title>ProStafff Solution | Retail Staffing & Recruitment</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="apple-touch-icon" href="./brand/prostafff-mark.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="ProStafff Solution — retail staffing & recruitment. Permanent, seasonal, and executive talent for leading brands." />
+  <title>ProStafff Solution | Retail Staffing & Recruitment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <script>
+    // If the file is opened directly via file:// protocol (double-clicked), 
+    // redirect to the standalone build version in the dist folder.
+    // Prevent redirect loop if already in the dist folder.
+    if (window.location.protocol === 'file:' && !window.location.href.includes('/dist/index.html')) {
+      window.location.href = './dist/index.html';
+    }
+  </script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

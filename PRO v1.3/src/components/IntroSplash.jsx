@@ -43,7 +43,7 @@ export default function IntroSplash({ onComplete }) {
 
             <div className="text-center">
               <motion.img
-                src="/brand/prostafff-mark-light.svg"
+                src="./brand/prostafff-mark-light.svg"
                 alt="ProStafff"
                 width={72}
                 height={72}

@@ -8,7 +8,7 @@ export default function Logo({
   const isLight = theme === 'light'
   const nameClass = isLight ? 'text-cream' : 'text-ink'
   const subClass = isLight ? 'text-cream/60' : 'text-navy/55'
-  const markSrc = isLight ? '/brand/prostafff-mark-light.svg' : '/brand/prostafff-mark.png'
+  const markSrc = isLight ? './brand/prostafff-mark-light.svg' : './brand/prostafff-mark.png'
 
   return (
     <span className={`inline-flex items-center gap-2.5 min-w-0 ${className}`}>

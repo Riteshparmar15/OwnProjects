@@ -14,18 +14,18 @@ export const navLinks = [
 ]
 
 export const luxuryBrands = [
-  { name: 'Chanel', logo: '/logos/chanel.png?v=2' },
-  { name: 'Cartier', logo: '/logos/cartier.png?v=2' },
-  { name: 'Christian Louboutin', logo: '/logos/louboutin.png?v=2' },
-  { name: 'BVLGARI', logo: '/logos/bvlgari.png?v=2' },
-  { name: 'Rolex', logo: '/logos/rolex.png?v=2' },
-  { name: 'Tiffany & Co.', logo: '/logos/tiffany.png?v=2' },
-  { name: 'Nike', logo: '/logos/nike.png?v=2' },
-  { name: 'Sephora', logo: '/logos/sephora.png?v=2' },
-  { name: 'Zara', logo: '/logos/zara.png?v=2' },
-  { name: 'Bath & Body Works', logo: '/logos/bbw.png?v=2' },
-  { name: 'Adidas', logo: '/logos/adidas.png?v=2' },
-  { name: 'Louis Vuitton', logo: '/logos/lv.png?v=2' },
+  { name: 'Chanel', logo: './logos/chanel.png?v=2' },
+  { name: 'Cartier', logo: './logos/cartier.png?v=2' },
+  { name: 'Christian Louboutin', logo: './logos/louboutin.png?v=2' },
+  { name: 'BVLGARI', logo: './logos/bvlgari.png?v=2' },
+  { name: 'Rolex', logo: './logos/rolex.png?v=2' },
+  { name: 'Tiffany & Co.', logo: './logos/tiffany.png?v=2' },
+  { name: 'Nike', logo: './logos/nike.png?v=2' },
+  { name: 'Sephora', logo: './logos/sephora.png?v=2' },
+  { name: 'Zara', logo: './logos/zara.png?v=2' },
+  { name: 'Bath & Body Works', logo: './logos/bbw.png?v=2' },
+  { name: 'Adidas', logo: './logos/adidas.png?v=2' },
+  { name: 'Louis Vuitton', logo: './logos/lv.png?v=2' },
 ]
 
 export const promptExamples = [
